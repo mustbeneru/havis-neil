@@ -1,0 +1,442 @@
+@font-face {
+    font-family: Roboto Slab;
+    src: url(./fonts/RobotoSlab-Regular.ttf);
+}
+
+@font-face {
+    font-family: qetod;
+    src: url(./fonts/Qetod.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Harry;
+    src: url(./fonts/DHF\ Harry\'s\ Brush.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    padding: 0;
+    font-family: Poppins;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: #d9d9d9;
+}
+
+.home {
+    background: linear-gradient(to right, #111010, #000000, #000000,  #000000 );
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    font-family: qetod;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    font-weight: bold;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: .8rem;
+}
+
+.header .left {
+    margin-left: 5rem;
+    font-size: 2rem;
+}
+
+.hero-logo {
+    position: absolute;
+    left: 1000px;
+    top: 200px;
+    width: 550px;
+    height: 500px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease, width 0.5s ease; /* Added width transition */
+}
+
+/* Fade-in animation when visible */
+.home.visible .hero-logo {
+    opacity: 1;
+    transform: scale(1);
+    filter: grayscale(0%);
+}
+
+/* Hover effect */
+.hero-logo:hover {
+    width: 700px; /* Change width on hover */
+    filter: brightness(150%);
+}
+
+header > img {
+    width: 250px;
+    height: 50px;
+    margin-left: 3rem;
+}
+
+
+nav {
+    display: flex;
+    gap: 3rem;
+    margin-right: 10rem;
+    font-size: 2rem;
+    border-bottom: none;
+}
+
+nav span {
+    color: #d9d9d9;
+    font-family: Roboto Slab;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+nav span:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-bar a {
+    text-decoration: none; /* Remove underline */
+}
+
+
+.hero-text { 
+    margin-top: 20rem;
+    margin-left: 25rem;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    text-align: center;
+}
+
+.name {
+    font-size: 6.5rem;
+    font-family: Harry;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text div {
+    margin: auto;
+}
+
+.about {
+    background-color: #322144;
+    height: fit-content;
+    padding-bottom: 3rem;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.infos {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+
+.info-container {
+    width: 550px;
+    text-align: center;
+}
+
+.info-container > img {
+    margin-top: 3rem;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+.info-container p {
+    margin-top: 3rem;
+    font-family: Poppins;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.more-info {
+    background-color: rgb(192, 187, 194);
+    justify-content: center;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+    padding-bottom: 16px;
+}
+
+
+.more-info > *{
+    color: black;
+}
+
+.more-info h2 {
+    padding-top: 8px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon img {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon > p {
+    width: 100px;
+    margin: 0;
+}
+
+.interest {
+    height: 90vh;
+    /*  */background: linear-gradient(to right, #1b1a1a , #000000,  #1b1a1a );
+   /*  */ background: linear-gradient(to right,  #050505, #0a0a0a,#111111, #181818, #1f1f1f,#272727,#2e2e2e, #363636, #3e3e3e, #464646, #4e4e4e, #565656);
+   background: linear-gradient(to right,  #050505,#0a0a0a, #111111, #1a1a1a, #111111,#0a0a0a,#050505);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
+    gap: 3rem;
+}
+
+.interest h1 {
+    font-size: 2.5rem;
+}
+
+.containers {
+    display: flex;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #575794;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 33%;
+}
+
+.interest p {
+    width: 500px;
+    margin: 0;
+}
+
+.container div {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.circle img {
+    width: 100px;
+}
+
+.contact {
+    /* background-color: #b4b2b6; */
+    background: linear-gradient(to left, #D446DD, #54377B, #19122C);
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contact img {
+    width: 400px;
+    height: 600px;
+}
+
+.contact > .containers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+}
+
+.home > * {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.icon img, .circle > *{
+    transition: transform 0.8s ease;
+}
+
+.icon img:hover, .circle > *:hover{
+    transform: rotate(360deg);
+}
+
+
+.arrow-down {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: auto;
+}
+
+
+.arrow-down a {
+    display: block;
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+}
+
+.arrow-down img {
+    width: 100%; /* Fill the anchor container */
+    height: 100%; /* Fill the anchor container */
+}
+
+
+
+.contact {
+    text-align: center;
+    height: 90vh;
+}
+
+.containers {
+    display: flex;
+    justify-content: space-around;
+}
+.flip-container {
+    perspective: 1000px;
+}
+
+.front img {
+    border-radius: 1rem;
+    border: 2px solid rgb(126, 34, 202);
+}
+
+.flip-checkbox {
+    display: none;
+}
+
+.flipper {
+    width: 400px;
+    height: 600px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    display: block;
+    cursor: pointer;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg) translate(0, 0); 
+}
+
+.front,
+.back {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform-origin: center; /* Set the transformation origin to the center */
+}
+
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg) translate(0, 0);
+    background-color: rgba(153, 85, 209, 0.253);
+    color: #dadada;
+    border-radius: 2px solid #dadada;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: 2px solid #fff;
+}
+
+.back p {
+    margin: 20px 0; 
+    font-size: 20px; 
+    line-height: 1.6; 
+}
+
+/* Reset styling for links inside the flipper */
+.flipper label {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.backlogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.back p{
+    font-size: 1.5rem;
+}
+
+.backlogos img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin: 0 1.5rem; /* Increased margin for better spacing */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #1b1a1a , #000000,  #1b1a1a );
+    color: #dadada;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
